@@ -6,7 +6,7 @@
 #################################################################
 
 required_packages <- c("tidyverse",
-                       "openxlsx",) 
+                       "openxlsx") 
 
 for(Package in required_packages){
   if(!require(Package,character.only = TRUE)) { 
@@ -15,7 +15,7 @@ for(Package in required_packages){
   library(Package,character.only = TRUE)
 }
 
-load(file = "DataTreated/Buff_1km_HIVE_Sub11.rda")
+load(file = "DataTreated/Buff_1km_HIVE_Sub1.rda")
 # load(file = "DataTreated/Buff_3km_HIVE_Sub11.rda")
 
 ###############################################################################
