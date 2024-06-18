@@ -3,7 +3,7 @@
     "path": "C:/_MY FOLDERS/RECHERCHE/_GITHUB/Hive_Montreal-Toronto/Scripts/4-GLM model.R",
     "project_path": "Scripts/4-GLM model.R",
     "type": "r_source",
-    "hash": "2896903169",
+    "hash": "21167836",
     "contents": "",
     "dirty": false,
     "created": 1718690261049.0,
@@ -12,15 +12,15 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "230,0",
-        "scrollLine": "216"
+        "cursorPosition": "365,62",
+        "scrollLine": "354"
     },
     "folds": "",
-    "lastKnownWriteTime": 1718693664,
+    "lastKnownWriteTime": 1718694801,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1718693664767,
+    "last_content_update": 1718694801563,
     "read_only": false,
     "read_only_alternatives": []
 }

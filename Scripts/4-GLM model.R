@@ -222,7 +222,7 @@ custom_order <- c("(Intercept)", "CityTO", "NDVI_50_100:CityTO", "NDVI_20_50", "
 TABLE_1.2 <- TABLE_1.2[match(custom_order, rownames(TABLE_1.2)), ]
 
 # Export table
-write.xlsx(TABLE_1.2, file = paste0("Outputs/",export_name, "Model_1-2",  ".xlsx"), 
+write.xlsx(TABLE_1.2, file = paste0("Outputs/",export_name, "_Model_1-2",  ".xlsx"), 
            sheetName = "Sheet1", 
            colNames = TRUE, 
            rowNames = TRUE, 
@@ -363,8 +363,9 @@ custom_order2 <- c("(Intercept)", "CityTO", "NDVI_50_100",
 # Reorder the rows based on the custom order
 TABLE_2.2 <- TABLE_2.2[match(custom_order2, rownames(TABLE_2.2)), ]
 
-write.xlsx(TABLE_2.2, file = paste0("Outputs/",export_name, "Model_2-2",  ".xlsx"), 
+write.xlsx(TABLE_2.2, file = paste0("Outputs/",export_name, "_Model_2-2",  ".xlsx"), 
            sheetName = "Sheet1", 
            colNames = TRUE, 
            rowNames = TRUE, 
            append = FALSE)
+
