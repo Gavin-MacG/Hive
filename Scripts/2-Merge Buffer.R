@@ -198,8 +198,62 @@ HIVE$Hghwy_len_Binary <- ifelse(HIVE$Hghwy_len >= 2692, 1, 0)
 # Tree as integer
 HIVE$Tree_NP <- as.integer(HIVE$Tree_NP)
 
-# save
-write.csv(HIVE,"HIVE_1KM.csv",row.names = FALSE)
+
+###############################################################################
+# Anonymize data ----------------------------------------------------------
+###############################################################################
+
+# Extract unique HiveID
+unique_HiveID <- unique(HIVE$HiveID)
+
+# Assign a unique number to each unique HiveID
+HiveID_mapping <- data.frame(
+  HiveID = unique_HiveID,
+  NewHiveID = 1:length(unique_HiveID)
+)
+
+HIVE <- HIVE %>%
+  left_join(HiveID_mapping, by = "HiveID") %>%
+  select(-HiveID) %>%
+  rename(HiveID = NewHiveID) %>% 
+  select(HiveID, everything())
+
+# Remove Place Unknown
+HIVE <- HIVE[HIVE$Place != "Unknown", ]
+
+# Levels for Median Income
+HIVE$MedInc_Qrt <- factor(HIVE$MedInc_Qrt, levels = c("1", "2", "3","4"))
+
+# Levels for Hive count
+HIVE$HvCnt_Cat <- factor(HIVE$HvCnt_Jenks, levels = c("<2","<5",'<10', '<50', "50+" ))
+HIVE$HvCnt_Cat <- relevel(as.factor(HIVE$HvCnt_Jenks), ref = "<2")
+
+# City Dummy
+HIVE$City <- relevel(as.factor(HIVE$City), ref = "MTL")
+HIVE$Place <- relevel(as.factor(HIVE$Place), ref = "Ground")
+
+#Year dummy
+HIVE$Year_2017 <- ifelse(HIVE$Year == '2017', 1, 0)
+HIVE$Year_2018 <- ifelse(HIVE$Year == '2018', 1, 0)
+HIVE$Year_2019 <- ifelse(HIVE$Year == '2019', 1, 0)
+HIVE$Year_2020 <- ifelse(HIVE$Year == '2020', 1, 0)
+HIVE$Year_2021 <- ifelse(HIVE$Year == '2021', 1, 0)
+HIVE$Year_2022 <- ifelse(HIVE$Year == '2022', 1, 0)
+HIVE$Year_Cat <- relevel(as.factor(HIVE$Year), ref = "2019")
+
+
+
+Hive1Km<- HIVE %>%
+  rename(Hghwy_Bi = Hghwy_len_Binary,
+         Status_Bi = Status_Binary) %>% 
+  select(HiveID, City, Status, Status_Bi, Place, NDVI_0_20, NDVI_20_50,
+         NDVI_50_100, NDVI_mean, Water_Bi, Water_Pct, Build_Pct, 
+         Hghwy_Bi, Hghwy_len,
+         NO2_mean, O3, Smoke, PM25_mean, BckYrd_mean, Own_mean,
+         MedInc_mean, MedInc_Qrt, HvCnt, HvCnt_Cat,
+         Year_Cat)
+
+save(Hive1Km, file="DataTreated/Hive_1km_Buffers.Rda")
 
 
 
