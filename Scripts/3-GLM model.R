@@ -369,3 +369,8 @@ write.xlsx(TABLE_2.2, file = paste0("Outputs/",export_name, "_Model_2-2",  ".xls
            rowNames = TRUE, 
            append = FALSE)
 
+######################################################################
+# Export the data subset without outliers for descriptive statistics  ---------------------------------------------------------
+######################################################################
+
+save(HIVE_Sub1, file = paste0("DataTreated/",export_name,"_Hive_Sub1.rda"))
