@@ -10,9 +10,9 @@ Open the Rproj file, then access the individual scripts from the file menu <br/>
 
 ## Folder structure 
 
-Outputs : Contians all the tables and figures created with the scripts <br/>
-Scripts : Contains the individual R scripts <br/>
-DataTreated : Contains the processed data that was created using raw data from the following sources : <br/>
+**Outputs** : Contians all the tables and figures created with the scripts <br/>
+**Scripts** : Contains the individual R scripts <br/>
+**DataTreated** : Contains the processed data that was created using raw data from the following sources : <br/>
 - Alveole.buzz proprietary data <br/>
 - Ontario Ministry of Natural Resources and Forestry <br/>
 - Communaute metropolitaine de Montreal <br/>
