@@ -1,25 +1,43 @@
-# Hive
- Code for article : "Determinants of honeybee hive survival and its implications for urban biodiversity in Toronto and Montreal: A Canadian case study"
+### Determinants of honeybee hive survival and its implications for urban biodiversity in Toronto and Montreal: A Canadian case study
 
-Available here : https://www.sciencedirect.com/science/article/abs/pii/S0169204624000653
+# Description
+This project contains the code used in the following article: 
+[Determinants of honeybee hive survival and its implications for urban biodiversity in Toronto and Montreal: A Canadian case study](https://www.sciencedirect.com/science/article/abs/pii/S0169204624000653)
+
+## Instructions
+
+Open the Rproj file, then access the individual scripts from the file menu <br/>
+
+## Folder structure 
+
+DataTreated : Contains the processed data that was created using raw data from the following sources : <br/>
+- Alveole.buzz proprietary data <br/>
+- Ontario Ministry of Natural Resources and Forestry <br/>
+- Communaute metropolitaine de Montreal <br/>
+- Statistics Canada (Census of population 2016) <br/>
+- Landsat 8 <br/>
+- Canadian Urban Environmental Health Research Consortium (CANUE) <br/>
+Outputs : Contians all the tables and figures created with the scripts <br/>
+Scripts : Contains the individual R scripts <br/>
 
 ## Packages : 
+"tidyverse" <br/>
+"openxlsx" <br/>
+"car" <br/>
+"sandwich" <br/>
+"pscl" <br/>
+"mfx" <br/>
+"DHARMa" <br/>
+"spdep" <br/>
+"sp" <br/>
+"pgirmess" <br/>
+"spfilteR" <br/>
+"betareg" <br/>
+"rgdal" <br/>
 
-install.packages("tidyverse")
-install.packages("openxlsx")
-install.packages("car")
-install.packages("sandwich")
-install.packages("pscl")
-install.packages("mfx")
-install.packages("DHARMa")
-install.packages("spdep")
-install.packages("sp")
-install.packages("pgirmess")
-install.packages("spfilteR")
-install.packages("betareg")
-install.packages("rgdal")
+Note : All package installation is handled within the scripts.
 
-## NOTE :
+# Important :
 
 The structure of the code has been designed to be flexible and adapt to your own unique lists of variables.
 
@@ -29,3 +47,8 @@ Be sure to have geographic coordinates in your datasets when performing the the 
 Also, be sure to adjust the geographic projection contained in the #3-GLM model script at:
  - Line 333 
  - Line 334  
+
+# Author
+
+Gavin MacGregor
+
