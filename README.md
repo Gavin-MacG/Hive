@@ -10,6 +10,8 @@ Open the Rproj file, then access the individual scripts from the file menu <br/>
 
 ## Folder structure 
 
+Outputs : Contians all the tables and figures created with the scripts <br/>
+Scripts : Contains the individual R scripts <br/>
 DataTreated : Contains the processed data that was created using raw data from the following sources : <br/>
 - Alveole.buzz proprietary data <br/>
 - Ontario Ministry of Natural Resources and Forestry <br/>
@@ -17,8 +19,7 @@ DataTreated : Contains the processed data that was created using raw data from t
 - Statistics Canada (Census of population 2016) <br/>
 - Landsat 8 <br/>
 - Canadian Urban Environmental Health Research Consortium (CANUE) <br/>
-Outputs : Contians all the tables and figures created with the scripts <br/>
-Scripts : Contains the individual R scripts <br/>
+
 
 ## Packages : 
 "tidyverse" <br/>
