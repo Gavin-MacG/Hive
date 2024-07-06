@@ -20,7 +20,6 @@ DataTreated : Contains the processed data that was created using raw data from t
 - Landsat 8 <br/>
 - Canadian Urban Environmental Health Research Consortium (CANUE) <br/>
 
-
 ## Packages : 
 "tidyverse" <br/>
 "openxlsx" <br/>
